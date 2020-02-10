@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="323.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ib.CentralaController">
+   <children>
+      <ImageView fitHeight="463.0" fitWidth="810.0" layoutX="-153.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cells.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="225.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WPROWADZANIE NOWEJ JEDNOSTKI KRWI DO SYSTEMU">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tekstPESEL" layoutX="478.0" layoutY="63.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect>
+      </TextField>
+      <Text fill="#fffefe" layoutX="420.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PESEL">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="#fffefe" layoutX="219.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data pobrania">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <DatePicker fx:id="datePickerDataPobrania" layoutX="174.0" layoutY="95.0">
+         <effect>
+            <InnerShadow color="#740909" height="0.0" radius="0.0" width="0.0">
+               <input>
+                  <Reflection />
+               </input>
+            </InnerShadow>
+         </effect></DatePicker>
+      <ChoiceBox fx:id="choiceBoxGrupaKrwiRh" layoutX="186.0" layoutY="215.0" prefWidth="150.0">
+         <effect>
+            <Reflection fraction="0.41" topOpacity="0.41" />
+         </effect></ChoiceBox>
+      <Text fill="#f2efef" layoutX="232.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="grupa Krwi">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <TextField fx:id="tekstImie" layoutX="478.0" layoutY="96.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstNazwisko" layoutX="478.0" layoutY="129.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstNrDomu" layoutX="478.0" layoutY="195.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstMiasto" layoutX="478.0" layoutY="162.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstWaga" layoutX="478.0" layoutY="357.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstNrLokalu" layoutX="478.0" layoutY="228.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstUlica" layoutX="478.0" layoutY="325.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstTelefon" layoutX="478.0" layoutY="293.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <TextField fx:id="tekstKodPocztowy" layoutX="478.0" layoutY="260.0">
+         <effect>
+            <InnerShadow color="#740909" />
+         </effect></TextField>
+      <Text fill="#f8f7f7" layoutX="425.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="410.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="418.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miasto" />
+      <Text fill="WHITE" layoutX="400.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numer domu">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="400.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numer lokalu">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="395.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kod pocztowy">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="416.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefon">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="422.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ulica">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="419.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Waga">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <Button fx:id="buttonDodajJednostkeKrwi" layoutX="236.0" layoutY="325.0" mnemonicParsing="false" onAction="#buttonDodajJednostkePressed" text="dodaj">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <textFill>
+            <LinearGradient endX="0.6297710360461519" endY="0.4580152972053935" startX="0.6335877860320434" startY="1.0">
+               <stops>
+                  <Stop color="#0ff252" />
+                  <Stop color="#0ff252" offset="0.007633587786259542" />
+                  <Stop color="#0a7f1c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Button>
+      <Text fill="WHITE" layoutX="189.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numer placowki medycznej">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Text>
+      <ChoiceBox fx:id="choiceBoxNrPlacowki" layoutX="186.0" layoutY="162.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow blurType="TWO_PASS_BOX" color="#740909" height="1.0" radius="0.0" width="0.0">
+               <input>
+                  <Reflection />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ChoiceBox>
+      <Button fx:id="buttonPokazPlacowki" layoutX="66.0" layoutY="163.0" mnemonicParsing="false" onAction="#buttonPokazPlacowkiPressed" text="pokaż placówki" textFill="#b20101">
+         <effect>
+            <InnerShadow color="#871b1b" />
+         </effect>
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Button>
+      <Text fx:id="textWynikDodania" fill="WHITE" layoutX="177.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.39999999999986">
+         <font>
+            <Font name="Century Gothic" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

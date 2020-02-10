@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ib.FiliaController">
+   <children>
+      <ImageView fitHeight="517.0" fitWidth="856.0" layoutX="-99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cells.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableZestawienieParametry" layoutX="4.0" layoutY="226.0" prefHeight="200.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="col_Id_parametry" prefWidth="39.20001220703125" text="id">
+             <cellValueFactory>
+                <PropertyValueFactory property="jednostka_id" />
+             </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="col_pesel_parametry" prefWidth="98.39999389648438" text="PESEL">
+             <cellValueFactory>
+                <PropertyValueFactory property="PESEL" />
+             </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="col_data_parametry" prefWidth="88.80001831054688" text="data pobrania">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data_pobrania" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="col_grupaRh_parametry" prefWidth="75.0" text="grupaRh">
+               <cellValueFactory>
+                  <PropertyValueFactory property="grupaRh" />
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <InnerShadow color="#690303" />
+               </input>
+            </SepiaTone>
+         </effect>
+      </TableView>
+      <TableView fx:id="tableZestawienieWszystkich" layoutX="387.0" layoutY="226.0" prefHeight="200.0" prefWidth="366.0">
+        <columns>
+          <TableColumn fx:id="col_liczbaJednostek_wszystkie" prefWidth="117.5999755859375" text="liczba jednostek">
+             <cellValueFactory>
+                <PropertyValueFactory property="liczba" />
+             </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="col_grupaRh_wszystkie" prefWidth="76.79995727539062" text="grupaRh">
+             <cellValueFactory>
+                <PropertyValueFactory property="grupaRh" />
+             </cellValueFactory>
+          </TableColumn>
+        </columns>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <InnerShadow color="#940909" />
+               </input>
+            </SepiaTone>
+         </effect>
+      </TableView>
+      <ChoiceBox fx:id="choiceBoxNrPlacowki" layoutX="305.0" layoutY="53.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow blurType="TWO_PASS_BOX" color="#740909" height="1.0" radius="0.0" width="0.0">
+               <input>
+                  <Reflection />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ChoiceBox>
+      <Text fill="WHITE" layoutX="281.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WYBIERZ NUMER PLACOWKI">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="choiceBoxGrupaKrwiRh" layoutX="303.0" layoutY="110.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow blurType="TWO_PASS_BOX" color="#740909" height="1.0" radius="0.0" width="0.0">
+               <input>
+                  <Reflection />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ChoiceBox>
+      <Text fill="WHITE" layoutX="349.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupa krwi">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonZestawienieParametry" layoutX="66.0" layoutY="188.0" mnemonicParsing="false" onAction="#buttonZestawienieParametryPressed" text="Wyświetl zestawienie dla wybranych parametrów">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-0.38" contrast="0.22" hue="0.53" saturation="-0.5" />
+         </effect>
+      </Button>
+      <Button fx:id="buttonPobierzDoTransfuzji" layoutX="544.0" layoutY="88.0" mnemonicParsing="false" onAction="#buttonPobierzDoTransfuzjiPressed" text="Pobierz do transfuzji" textFill="#ff0b0b">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonZestawienieWszystkie" layoutX="426.0" layoutY="188.0" mnemonicParsing="false" onAction="#buttonZestawienieWszystkiePressed" text="Wyświetl zestawienie wszystkich jednostek krwi">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-0.38" contrast="0.22" hue="0.53" saturation="-0.5" />
+         </effect>
+      </Button>
+      <Button fx:id="buttonArchiwum" layoutX="72.0" layoutY="88.0" mnemonicParsing="false" onAction="#buttonArchiwumPressed" text="        archiwum       ">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
